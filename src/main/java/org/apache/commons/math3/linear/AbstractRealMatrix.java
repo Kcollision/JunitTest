@@ -146,7 +146,7 @@ public abstract class AbstractRealMatrix
             for (int col = 0; col < nCols; ++col) {
                 double sum = 0;
                 for (int i = 0; i < nSum; ++i) {
-                    sum = getEntry(row, i) * m.getEntry(i, col);
+                    sum += getEntry(row, i) * m.getEntry(i, col);
                 }
                 out.setEntry(row, col, sum);
             }
